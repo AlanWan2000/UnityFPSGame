@@ -17,4 +17,16 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/FPS/Scenes/MainScene.unity
     guid: d794a2ef8ba31d847ad3c19d03e2ddb9
+  - enabled: 1
+    path: Assets/FPS/Scenes/CorridorScene.unity
+    guid: ab39ac99446b6e74da3e7cc80f353356
+  - enabled: 1
+    path: Assets/FPS/Scenes/BigScene.unity
+    guid: 0b48cc82aac2fb3449fe25bba75f5b05
+  - enabled: 1
+    path: Assets/FPS/Scenes/SecondaryScene.unity
+    guid: 9fc0d4010bbf28b4594072e72b8655ab
+  - enabled: 1
+    path: Assets/FPS/Scenes/MazeScene.unity
+    guid: 5ff48ed1a89c80d40b992f9dddfe4abf
   m_configObjects: {}
