@@ -7,6 +7,8 @@ namespace Unity.FPS.Gameplay
     [RequireComponent(typeof(CharacterController), typeof(PlayerInputHandler), typeof(AudioSource))]
     public class PlayerCharacterController : MonoBehaviour
     {
+
+
         [Header("References")] [Tooltip("Reference to the main camera used for the player")]
         public Camera PlayerCamera;
 
@@ -142,6 +144,7 @@ namespace Unity.FPS.Gameplay
 
         void Start()
         {
+
             // fetch components on the same gameObject
             m_Controller = GetComponent<CharacterController>();
             DebugUtility.HandleErrorIfNullGetComponent<CharacterController, PlayerCharacterController>(m_Controller,
@@ -157,6 +160,7 @@ namespace Unity.FPS.Gameplay
 
             m_Health = GetComponent<Health>();
             DebugUtility.HandleErrorIfNullGetComponent<Health, PlayerCharacterController>(m_Health, this, gameObject);
+            m_Health.MaxHealth = 100 + 10 * Random.Range(1, 11);
 
             m_Actor = GetComponent<Actor>();
             DebugUtility.HandleErrorIfNullGetComponent<Actor, PlayerCharacterController>(m_Actor, this, gameObject);

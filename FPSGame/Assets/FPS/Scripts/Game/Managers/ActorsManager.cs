@@ -10,6 +10,7 @@ namespace Unity.FPS.Game
 
         public void SetPlayer(GameObject player) => Player = player;
 
+
         void Awake()
         {
             Actors = new List<Actor>();
