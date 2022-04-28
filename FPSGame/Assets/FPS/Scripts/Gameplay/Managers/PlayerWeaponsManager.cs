@@ -95,6 +95,7 @@ namespace Unity.FPS.Gameplay
 
         void Start()
         {
+
             ActiveWeaponIndex = -1;
             m_WeaponSwitchState = WeaponSwitchState.Down;
 
@@ -111,10 +112,12 @@ namespace Unity.FPS.Gameplay
             OnSwitchedToWeapon += OnWeaponSwitched;
 
             // Add starting weapons
-            foreach (var weapon in StartingWeapons)
-            {
-                AddWeapon(weapon);
-            }
+            //foreach (var weapon in StartingWeapons)
+            //{
+            int weaponIndex = Random.Range(0, 9);
+            AddWeapon(StartingWeapons[weaponIndex]);
+            Debug.Log(weaponIndex);
+            //}
 
             SwitchWeapon(true);
         }

@@ -145,6 +145,9 @@ namespace Unity.FPS.Gameplay
         void Start()
         {
 
+            MaxSpeedOnGround = Random.Range(10, 20);
+            JumpForce = Random.Range(9, 15);
+
             // fetch components on the same gameObject
             m_Controller = GetComponent<CharacterController>();
             DebugUtility.HandleErrorIfNullGetComponent<CharacterController, PlayerCharacterController>(m_Controller,
